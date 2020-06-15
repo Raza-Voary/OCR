@@ -10,6 +10,8 @@ function createWindow (){
 
     // creation de fenetre
     screen = new BrowserWindow({
+        height: 700, 
+        width: 900, 
         webPreferences: {
             nodeIntegration: true
         }

@@ -4,7 +4,6 @@ const path = require('path') // module de chemin
 const {TesseractWorker} = require('tesseract.js') // module OCR
 const worker = new TesseractWorker();
 
-//box= document.getElementsByClassName('box') //prend l'objet class='box' dans html
 text = document.getElementById('text') // prend l'objet id=text dans html
 btnRecognition = document.getElementById('btnRecognition') //prend l'objet id=btnRecognition dans html 
 
@@ -57,25 +56,8 @@ function initImageUpload(box) {
       previewImage(file); 
     }
 
-    // btnRecognition.addEventListener('click', function(){
-    // let file = path.join(imageType, file.value)
-    // var image= fs.reaFileSync(file, {
-    //   encoding: null
-    // });
-  
-    // Tesseract.recognize(image)
-    //   .progress(function(p){
-    //     console.log('progress', p);
-    //   })
-    //   .then(function(result){
-    //     console.log('result', result)
-    //   })
-  // })
   }
-
-  
-  
-  
+   
 }
 
 // initialize box-scope
@@ -86,8 +68,6 @@ for (let i = 0; i < boxes.length; i++) {
   initDropEffect(box);
   initImageUpload(box);
 }
-
-
 
 /// drop-effect
 function initDropEffect(box){
